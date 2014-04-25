@@ -1,0 +1,30 @@
+(sogeti)
+sudo groupadd -g 13003 cds_qua
+sudo useradd -m -c "CDS Outils Exploitation" -d /home/cds_qua_exp -g 13003 -u 13001 cds_qua_exp
+sudo usermod -G depot,source cds_qua_exp
+sudo passwd cds_qua_exp
+sudo passwd -x -1 cds_qua_exp
+
+sudop /data/soclecds_pro/packages/current-soclecds/0-config/cds_package_prepare_fs.sh mikaweb_1 mikaweb_1 100M qua
+sudo chown -R cds_pro_exp:cds_pro /data/mikaweb_1_qua
+
+
+(cds_pro_exp)
+/data/soclecds_pro/packages/current-soclecds/0-config/cds_package_create.sh mikaweb_1 0.1 qua
+tar xvf /opt/sources/mikaweb/mikaweb_pro-1.2_20130304.tgz
+mv mikaweb_pro-1.2 mikaweb_1_qua-1.2
+unlink current-mikaweb_1
+ln -s mikaweb_1_qua-1.2 current-mikaweb_1
+
+ 
+(sogeti)
+cd /var/www/html/
+sudo ln -s /data/mikaweb_1_qua/packages/current-mikaweb_1/5-http mikaweb_1_qua
+
+
+(cds_pro_exp)
+chmod o+r /data/soclecds_pro/packages/current-soclecds/0-config/index_menu.csv
+vi /data/soclecds_pro/packages/current-soclecds/0-config/index_menu.csv
+
+
+sogeticdsbupessac

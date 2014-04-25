@@ -9,23 +9,37 @@
 == Changes and Roadmap ==
 
 
-=== LIBAPT v0.9.5 : 2013/08/15 ===
+=== LIBAPT v0.9.5 : 2013/10/15 ===
 _Bugs_
+ * IE 9/10 compatibility CSS and JS problems (done)
+ * LibaptFilter: create_from_string was broken (done)
+ * LibaptModelView: filters settings was broken (done)
+ * PHP Model: readCount has a bad result (done)
+ * PHP SQL Builder: should replace null value by default value in SQL query? or only in views? order by clause is impacted (todo)
 _Updates_
- * JS LibaptGrid, LibaptGridTable: redesign api (remove methods, add events callbacks) (todo)
- * JS LibaptTable: use redesigned api, draw only visible rows (todo)
- * JS LibaptDataTables: use redesigned api, enable refresh/create/update/delete/export (todo)
- * JS PivotGrid view: redesign api (todo)
+ * JS LibaptTable: rewrite on redesigned API (mixins and events) (done)
+ * JS LibaptView: api are redesigned with mixins, toolbar actions and events (done)
+ * JS LibaptModelView: api are redesigned (done)
+ * JS LibaptTable: draw only visible rows (done)
+ * JS LibaptModelView: new load strategy option : load all records at startup (done)
+ * JS LibaptModelView: new load strategy option : load current page records with some pages before and after (done)
+ * JS LibaptModelView: new load strategy option : load current page records at startup an all other pages in background (todo)
+ * JS LibaptDataTables: use redesigned api (done)
+ * JS LibaptDataTables: enable refresh/create/update/delete/export (todo)
+ * JS PivotGrid view: redesign api (done)
  * PHP code cleaning and doc update (current)
- * JS Models : manage events on crud operations
- * JS Storage : rewrite cache operations
+ * JS Models : manage events on crud operations (done)
+ * JS Storage : rewrite cache operations (current)
+ * JS LibaptDygraph: module rewrite from PHP to JS (done)
 _Addons_
- * JS DocWiki view: rewrite the wiki like feature in javascript (todo)
- * JS PivotTimeGrid view: rewrite the calendar plugin with PivotGrid and a Time axis (todo)
- * JS LibaptCaches: manage session/browser caches with or without expiration
+ * JS PivotTimeGrid view: rewrite the calendar plugin with PivotGrid and a Time axis (done)
+ * JS LibaptCache: manage session/browser caches with or without expiration (done)
+ * JS Introspection module: list of events, classes, classes configurable attributes (done)
+ * JS LibaptFlot: new plot module (done)
+ * JS translation module: database tables, model, table view, LibaptTranslate class (done)
+ * JS/PHP new filter operators: NOT EQUALS, IS NULL, IS NOT NULL (done)
 
-
-
+ 
 === LIBAPT v0.9.4 : 2013/07/15 ===
 _Bugs_
  * JS links between views: one view to many views links make many refresh (done)

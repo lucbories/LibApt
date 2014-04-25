@@ -5,44 +5,15 @@
  * @license		Apache License Version 2.0, January 2004; see LICENSE.txt or http://www.apache.org/licenses/
  */
 
-Roadmap
-v1.x.x : Q3 of 2013 (stability and documentation)
+
 Addons
-	Rewrite of the PHP Javascript wrapper: group all functions in a class
 	Add application configuration: HTTP_KEYWORDS
 	Finish CSV storage engine
 	Field: add a storage format attribute (number, date... format)
 	Field: add a display format attribute (min, max, range, date pattern...)
 	View: add a editor option to display each field
-	Cache feature: storage cache, view cache (file, db)
 	create PDO storage engine
 	create LDAP storage engine for authentication
- * Project files reorganisation :
-		FRAMEWORK
-			LIBAPT-SERVER
-				php
-					L0-core
-					L1-storage
-					L2-models
-					L3-views
-					L4-apps
-					L5-addons
-			LIBAPT-IMAGES
-				...
-			LIBAPT-CLIENT
-				css
-				js
-					L0-core
-					L1-storage
-					L2-models
-					L3-views
-					L4-apps
-					L5-addons
-		APPLICATIONS
-			LIBAPT-MODULES
-			LIBAPT-DEMO-1
-			LIBAPT-DEMO-2
-....
 
 
 

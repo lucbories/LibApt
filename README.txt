@@ -73,37 +73,38 @@ Edit .htaccess into the root of your web server space :
 
 
 
-INSTALL LIBAPT APPLICATIONS:
+CREATE A SIMPLE APPLICATION (see online howto)
 
-Go into in the web application folder and copy :
-libapt-demo-0.x.y/
-libapt-images-0.x.y/
-libapt-main-0.x.y/
-libapt-plugins-0.x.y/
-magicapp/
+Standard files tree for a lonely application ('myapp'):
 
-
-
-FOR MAGICAPP : (see http://code.google.com/p/libapt/wiki/FrHowtoCreateApplication)
-Configure magicapp/index.php according to your needs.
-That's all.
-Open a web browser in http://serveur/.../magicapp
-
-
-
-FOR LIBAPT-DEMO : (http://code.google.com/p/libapt/wiki/FrHowtoCreateApplication)
-
-Create the DB schema and datas :
-use libapt-demo-0.x.y/install/§auth_db_20130113.sql for user authentification and role base authorizations.
-use libapt-demo-0.x.y/install/§demo_db_20130113.sql for calendars, datatables, docwiki, planning demo modules.
-Rename the default database name in the two files corresponding to your dababases (auth_db and demo_db can be into the same database).
-
-Remove the libapt-demo-0.x.y/install/ folder.
-Configure your database: libapt-demo-0.x.y/common/db_connexions.csv
-Configure libapt-demo-0.x.y/index.php according to your needs.
-Configure libapt-demo-0.x.y/load.php if needed
-
-Open a web browser in http://serveur/.../libapt-demo-0.x.y/
-A login screen appears.
-Enter the login "test1" ans the password "test1".
+on the root web server :
+libapt/
+	libapt-client-x.y.z
+	libapt-server-x.y.z
+	libapt-static-x.y.z
+myapp/								Application root directory
+	css/							Application CSS files
+	datas/							Application write directory
+		cache/						Application cache directory
+		sessions/					Application session directory
+		traces.log					Application debug traces files
+	images/							Application images files
+	js/							Application javascript files
+	modules/						Application features directory
+		home/						Application home feature
+			content1.include			Application HTML content
+			content2.include			Application HTML content
+			menus.ini				Application menus declaration
+			views.ini				Application views declaration
+		load.php					Application modules resources loading
+	license.txt						Application license file if needed
+	app_cfg.php						Application main configuration
+	index.php						Application main file (DO NOT MODIFY THIS FILE)
+	load.php						Application resources loading
+		
+NB:
+datas/ is the only one root directory for write operations.
+cache/ and sessions/ directory are imperative even if not used.
+each application feature has its own module directory.
+HTML content include files has only usefull HTML content, no header, no footer.
 

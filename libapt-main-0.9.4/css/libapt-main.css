@@ -1,0 +1,364 @@
+/**
+ * @version		$Id: libapt-main.css 2012-10-08 LBO $
+ * @package		A PHP TOOLKIT (APT) Library
+ * @subpackage	libapt-plugins/apt-css
+ * @copyright	Copyright (C) 2011 Luc BORIES All rights reserved.
+ * @license		Apache License Version 2.0, January 2004; see LICENSE.txt or http://www.apache.org/licenses/
+ */
+
+ 
+/* LIBAPT ICONS */
+.libapt-icon-16 { padding:0px; border:none; width: 16px; height: 16px; }
+.libapt-icon-32 { padding:0px; border:none; width: 32px; height: 32px; }
+
+.libapt-icon-fleche-double-gauche-16-vert { background-image: url(../images/fleches/de-configuration-double-a-gauche-icone-9646-16.png); }
+.libapt-icon-fleche-double-droite-16-vert { background-image: url(../images/fleches/de-configuration-double-a-droite-icone-3928-16.png); }
+.libapt-icon-fleche-double-gauche-32-vert { background-image: url(../images/fleches/de-configuration-double-a-gauche-icone-9646-32.png); }
+.libapt-icon-fleche-double-droite-32-vert { background-image: url(../images/fleches/de-configuration-double-a-droite-icone-3928-32.png); }
+
+.libapt-icon-fleche-simple-gauche-16-bleu { background-image: url(../images/fleches/fleche-erreur-a-gauche-precedente-icone-3917-16.png); }
+.libapt-icon-fleche-simple-droite-16-bleu { background-image: url(../images/fleches/fleche-a-cote-a-droite-icone-6873-16.png); }
+
+.libapt-icon-pager-first-16 { background-image: url(../images/fleches/pagination_1_first.png); }
+.libapt-icon-pager-last-16 { background-image: url(../images/fleches/pagination_1_last.png); }
+.libapt-icon-pager-page-16 { background-image: url(../images/contents.gif); }
+.libapt-icon-pager-next-16 { background-image: url(../images/fleches/pagination_1_next.png); }
+.libapt-icon-pager-previous-16 { background-image: url(../images/fleches/pagination_1_previous.png); }
+
+
+
+
+/* LIBAPT PAGER */
+button.libapt_pager_button		{ width:auto; height:18px; padding:0px; font-size:9px; margin:1px; vertical-align: middle; }
+button.libapt_pager_button > span	{ height:18px; padding:0px; font-size:9px; vertical-align: middle; margin:0px; }
+
+.libapt_pager_menu_pages		{ float:left; width:60px; text-align:center; }
+.libapt_pager_menu_pages > li.ui-menu-item { font-size:0.9em; text-align:center; }
+
+.libapt_pager_menu_sizes		 { float:left; width:40px; text-align:center; }
+.libapt_pager_menu_sizes > li.ui-menu-item { font-size:0.9em; text-align:center; }
+
+
+
+/* LIBAPT TABLE TOOLBAR */
+.libapt_toolbar_content { vertical-align: middle; height:auto; }
+
+
+
+
+/* MENUS */
+.libapt_menu_icon {
+	width: 32px;
+	height: 32px;
+	padding: 0px;
+	vertical-align: middle;
+	overflow: hidden;
+}
+
+.libapt_icon_loader {
+}
+
+/* TABS */
+.libapt_tabs_dense { padding: 0.1em; font-size:12px; text-align:center; }
+
+
+/* TABLE */
+.libapt_table_titlebar_row th { padding: 0.1em; font-size:12px; text-align:center; }
+.libapt_table_toolbar_row th { padding: 0.1em; }
+.libapt_table_header_row th { padding: 0.1em; font-size:12px; text-align:center; }
+
+
+/* JQUERY-UI PORTLETS */
+.portlet { margin: 0 1em 1em 0; }
+.portlet-header { margin: 0.3em; padding-bottom: 4px; padding-left: 0.2em; }
+.portlet-header .ui-icon { float: right; }
+.portlet-content { padding: 0.4em; }
+.ui-sortable-placeholder { border: 1px dotted black; visibility: visible !important; height: 50px !important; }
+.ui-sortable-placeholder * { visibility: hidden; }
+ 
+ .libapt_portlet_container {
+	min-height: 3em;
+	text-align:center;
+ }
+ 
+ .portlet-content {
+	text-align:center;
+ }
+ 
+ 
+table tbody tr:nth-child(even) { background: #DCDCDC; }
+
+.ui-selecting {
+	background-color: #bbb;
+}
+
+.ui-selected {
+	background-color: #888;
+	border: 3px solid #999;
+}
+
+table tbody tr.ui-selecting:nth-child(even) {
+	background-color: #888;
+	border: 3px solid #999;
+}
+
+table tbody tr.ui-selected:nth-child(even) {
+	background-color: #888;
+	border: 3px solid #999;
+}
+ 
+ 
+ 
+ .reveal-modal {
+        position: fixed;
+        top: 100px;
+}
+/*
+td.dense {
+  font: 10px Arial, Sans-serif;
+  font-size: 10px;
+  padding: 0px;
+}*/
+
+th.htColHeader {
+  padding: 4px 4px;
+}
+
+
+
+/* DATATABLES - DATATOOLS */
+.dataTables_wrapper .ui-toolbar {
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+a.DTTT_disabled {
+	visibility: hidden;
+}
+
+
+/* DATATABLES - DATATOOLS - COLVIS */
+.ColVis {
+	float: left;
+	margin-bottom: 0em;
+	margin-top: 0px;
+}
+
+button.ColVis_Button, a.ColVis_Button {
+	height: auto;
+	text-align:left;
+	height: auto;
+	margin-right: 3px;
+	padding: 3px 8px;
+	
+	cursor: pointer;
+	*cursor: hand;
+	
+	font-size: 0.88em;
+	color: black !important;
+	border: 1px solid #999;
+	background-color: #f0f0f0;
+	
+	-webkit-border-radius: 2px;
+	   -moz-border-radius: 2px;
+	    -ms-border-radius: 2px;
+	     -o-border-radius: 2px;
+	        border-radius: 2px;
+
+	-webkit-box-shadow: 1px 1px 3px #ccc;
+	   -moz-box-shadow: 1px 1px 3px #ccc;
+	    -ms-box-shadow: 1px 1px 3px #ccc;
+	     -o-box-shadow: 1px 1px 3px #ccc;
+	        box-shadow: 1px 1px 3px #ccc;
+
+	/* Generated by http://www.colorzilla.com/gradient-editor/ */
+	background: #ffffff; /* Old browsers */
+	background: -webkit-linear-gradient(top, #ffffff 0%,#f3f3f3 89%,#f9f9f9 100%); /* Chrome10+,Safari5.1+ */
+	background:    -moz-linear-gradient(top, #ffffff 0%,#f3f3f3 89%,#f9f9f9 100%); /* FF3.6+ */
+	background:     -ms-linear-gradient(top, #ffffff 0%,#f3f3f3 89%,#f9f9f9 100%); /* IE10+ */
+	background:      -o-linear-gradient(top, #ffffff 0%,#f3f3f3 89%,#f9f9f9 100%); /* Opera 11.10+ */
+	background:         linear-gradient(top, #ffffff 0%,#f3f3f3 89%,#f9f9f9 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f9f9f9',GradientType=0 ); /* IE6-9 */
+}
+
+button.ColVis_Button:hover {
+	border: 1px solid #999;
+	background-color: #f0f0f0;
+}
+
+
+
+/*
+ * TABLE ACTION BUTTON
+ */
+
+table thead tr th button.libapt_toolbar_button {
+	max-width: 32px;
+	min-height: 24px;
+	max-height: 32px;
+}
+
+table tbody tr td button.libapt_toolbar_button {
+	max-width: 32px;
+	max-height: 22px;
+}
+
+th.libapt_table_action_header{
+	padding: 1px;
+	text-align: center;
+}
+
+td.libapt_table_action_cell{
+	padding: 1px;
+	text-align: center;
+}
+
+
+/*************/
+/* content */
+/*************/
+#content {
+    background-color: #ffffff;
+    border-bottom: 1px solid #D4D7AE;
+    border-right: 1px solid #D4D7AE;
+    border-left: 1px solid #D4D7AE;
+    color:#000000;
+    font-size:12px;
+    float:left;
+    min-height:300px;
+    margin-left:5px;
+    padding:10px;
+    width:97%;
+}
+
+#content span.underlined {
+	border:none;
+	border-bottom: 3px solid #D4D7AE;
+	background-color: #D4D7AE;
+	color:#000000;
+	display:block;
+	height:1px;
+	margin:0;
+	overflow:hidden;
+	padding:0;
+	position:relative;
+	top:-8px;
+	z-index:1;
+}
+#content span.title {
+	background-color: #D4D7AE;
+	color:#000000;
+	font-size:16px;
+	font-weight:bold;
+	position:relative;
+	z-index:2;
+}
+
+#content span.title a {
+	background-color: #D4D7AE;
+	color:#000000;
+	font-size:16px;
+	font-weight:bold;
+	position:relative;
+	z-index:2;
+}
+
+#content_subview {
+    color:#000000;
+    font-size:12px;
+    float:left;
+    margin-left:0px;
+    padding:0px;
+    margin-bottom:20px;
+    width:100%;
+}
+
+#content_subview_title a{
+	background-color: #D4D7AE;
+	border-left: 10px solid #D4D7AE;
+	color:#000000;
+	font-size:12px;
+	font-weight:bold;
+	position:relative;
+	z-index:2;
+}
+
+#content_show_hide a{
+	background-color: #D4D7AE;
+	border-left: 10px solid #D4D7AE;
+	color:#000000;
+	font-size:12px;
+	font-weight:bold;
+	position:relative;
+	z-index:2;
+}
+
+
+
+
+/******************/
+/* table elements */
+/******************/
+.content_table {
+	border:none;
+	width:100%;
+}
+
+.content_thead {
+	background-color: #E1E4BE;
+}
+
+.content_tr {
+	background-color: #FFF0F5;
+}
+
+.content_th {
+	color: #000000;
+	font-size: 10px;
+	padding: 5px;
+}
+
+.content_td{
+	font: 12px Arial, Sans-serif;
+	font-size: 10px;
+	padding: 2px;
+	vertical-align: middle;
+}
+
+tr.row1 {
+	background-color: #DCDCDC;/*#FFF0F5;*/
+}
+
+tr.row2 {
+	background-color: #04a8c8;
+}
+
+tr.row3 {
+	background-color: #FAB400;
+}
+
+tr.row4 {
+	background-color: #ffffff;
+}
+
+
+.content_th.action, .content_td.action {
+	width: 100px;
+	text-align: center;
+}
+
+
+/* css for timepicker */
+.ui-timepicker-div .ui-widget-header { margin-bottom: 8px; }
+.ui-timepicker-div dl { text-align: left; }
+.ui-timepicker-div dl dt { height: 25px; margin-bottom: -25px; }
+.ui-timepicker-div dl dd { margin: 0 10px 10px 65px; }
+.ui-timepicker-div td { font-size: 90%; }
+.ui-tpicker-grid-label { background: none; border: none; margin: 0; padding: 0; }
+
+
+
+
+

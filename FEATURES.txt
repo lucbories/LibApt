@@ -1,0 +1,108 @@
+/**
+ * @version		$Id: FEATURES.txt 2013-05-15 LBO $
+ * @package		A PHP TOOLKIT (APT) Library
+ * @copyright	Copyright (C) 2011-2013 Luc BORIES All rights reserved.
+ * @license		Apache License Version 2.0, January 2004; see LICENSE.txt or http://www.apache.org/licenses/
+ */
+
+ 
+FRAMEWORK PURPOSE
+	PHP / javascript (JS) toolkit
+	Simplicity
+	Speed
+	Declarative Programming: code less
+You declare all your application datas and views in configuration files and LIBAPT build dynamically your application.
+Declare your datas models on the server side and use it on the client side!
+
+MVC Features
+	MVC (Model View Controller)
+	server side PHP / client side javascript (JS) toolkit
+	declaration driven application : write configuration files (.INI) and code less
+	CSV, SQL based models
+	standard views for data models
+
+Security Features
+	authentication mechanisms
+	roles based autorizations
+
+Others Features
+	lightweight toolkit
+	themes based (HTML, CSS, Javascript)
+	responsive grid layout with the Foundation framework from Zurb
+	integrated lightweight templates
+
+
+...
+
+
+DEMO APPLICATION PURPOSE
+	Test framework features
+	Use case example
+	
+
+DEMO FEATURES
+	Core features
+		Menu configuration with INI file
+		Databases connections configuration with INI file
+		Models configuration with INI file
+		Views configuration with INI file
+	
+	View features
+		Simple view through static html file
+		Display / Edit model datas through a table view
+		Composite view
+		Template view
+		JavaScript table view using ajax request for CRUD operations
+		JavaScript graph
+		
+	Authentication, Authorization module
+		Application login / logout
+		Login informations
+		Role based authorizations
+
+
+APPLICATION
+	Session : array engine, file engine
+	Security :
+		authentification using models (db or csv storage)
+		role based authorization using models (db or csv storage)
+	MVC pattern
+	Dispather, controllers
+	Declarative programming : use CSV files to declare
+		menus
+		db connections (multi-databases, multi-logins)
+		datas models (fields, multi-tables)
+		views (fields, filters, options)
+	Page rendering with html themes
+	
+	
+MODELS
+	Simultaneous multi-databases, multi-csv access
+	Storage engines :
+		CSV (read only)
+		MYSQL
+		MYSQLi
+	Query, Cursor
+	Specific models :
+		Request (list all get/post/cookies/...) for developpers
+		Session (list all session variables)
+	JSON CRUD operations
+
+
+VIEWS
+	TemplateView
+	ErrorsView
+	TableModelView
+	ExtTableModelView
+	IncludeView
+	LoginProfileView
+	JsonModelView
+	MessagesView
+	Template view
+
+CONTROLLERS
+	ConnectionsController
+	JsonController
+	MenusController
+	ModelsController
+	ViewsController

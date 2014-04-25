@@ -1,0 +1,219 @@
+/**
+ * @version		$Id: CHANGES.txt 2013-06-27 LBO $
+ * @package		Application Toolkit Library
+ * @copyright	Copyright (C) 2011-2013 Luc BORIES All rights reserved.
+ * @license		Apache License Version 2.0, January 2004; see LICENSE.txt or http://www.apache.org/licenses/
+ */
+
+
+== Changes and Roadmap ==
+
+
+=== LIBAPT v0.9.5 : 2013/08/15 ===
+_Bugs_
+_Updates_
+ * JS LibaptGrid, LibaptGridTable: redesign api (remove methods, add events callbacks) (todo)
+ * JS LibaptTable: use redesigned api, draw only visible rows (todo)
+ * JS LibaptDataTables: use redesigned api, enable refresh/create/update/delete/export (todo)
+ * JS PivotGrid view: redesign api (todo)
+ * PHP code cleaning and doc update (current)
+ * JS Models : manage events on crud operations
+ * JS Storage : rewrite cache operations
+_Addons_
+ * JS DocWiki view: rewrite the wiki like feature in javascript (todo)
+ * JS PivotTimeGrid view: rewrite the calendar plugin with PivotGrid and a Time axis (todo)
+ * JS LibaptCaches: manage session/browser caches with or without expiration
+
+
+
+=== LIBAPT v0.9.4 : 2013/07/15 ===
+_Bugs_
+ * JS links between views: one view to many views links make many refresh (done)
+ * JS console doesn't work on some old browsers: append a compatibility layer (done)
+ * PHP/JS group by clause was broken (done)
+ * JS roles based GUI was broken : create/update/delete actions weren't hidden if the logged user hasn't CRUD roles (done)
+_Updates_
+ * JS model: append 'is_cached' option to load only one time json streams (done)
+ * JS model view: crud toolbar (refresh, create, update, delete) (done)
+ * JS model view: export toolbar (csv, jpeg, bmp, png, html) (done)
+ * JS model view table: append arrows in header columns to order rows (done)
+ * JS Pager view: more pager format (todo)
+ * JS model view: rewrite export buttons (done)
+ * JS code cleaning and doc update (module, mixins, inheritance...) (done)
+ * JS code cleaning and doc update (current)
+ * PHP code cleaning and doc update (current)
+_Addons_
+ * JS PivotGrid view: display datas with pivot features with dimensions axis analysis (done)
+ * JS PivotGridCheckbox: display a grid of checkboxes to manage 1 to 1 relations between 2 tables for example (done)
+ * JS Datatables wrapper view: display the well known Datables jQuery plugin with the power of declarative programming (done, readonly)
+ * JS module feature: load javascript file on demand, only with module dependancies (done)
+
+
+
+=== LIBAPT v0.9.3 : 2013/05/15 ===
+_Bugs_
+ * menu js action was broken for a menu item without icon (done)
+ * view extract to window was not perfect... (done)
+_Updates_
+ * JS code cleaning and doc update (current)
+ * PHP code cleaning and doc update (current)
+_Addons_
+ * JS Selector view:one or many selection from model datas (done)
+ * JS Form view: display a form for a model record (done)
+ * JS standard editors view: display an editor for a typped value (a model record value for example) (done)
+ * JS Window view: display a window (float or modal) displaying a given view (done)
+ * JS Settins view: manage settings panel for views (done)
+ * JS QueryEditor view: display settings panel for model view query (fields, orders by, groups by, filters...) (done)
+
+
+
+=== LIBAPT v0.9.2 : 2013/03/31 ===
+_Bugs_
+	Write an unique api for module files getting
+		Correct icon module path
+			icon_app_url = "/modules/demo_views/images/view_32.png" (todo)
+		Correct csv path
+			model_file_path_name          = /modules/demo_dygraph/graph1_datas.csv
+		Correct template file
+			template_file_name            = "/modules/demo_planning/VIEW_PLANNING_ATWORK.template"
+	JSON controller : assertNull to replace with assertNotNull some times
+	MODEL_AUTH_PROFILES_USERS_ROLES lists too many profiles/roles/logins : use INNER JOIN in place of foreign keys
+
+_Updates_
+	TemplateView
+		new tags for JS blocks
+	Simplify application configuration of index.php : split app and framework config
+		app.php
+		index.php (include app.php)
+
+_Addons_
+	Application modules reorganisation :
+		Move common modules to a libapt-modules-x.y.z directory outside the applications directories.
+		Create configuration constant :
+			LIBAPT_APP_MODULES_PATH: application relative path to the libapt-modules-x.y.z directory
+			LIBAPT_APP_MODULES_URL:  application relative url to the libapt-modules-x.y.z directory
+			LIBAPT_APP_MODULES_ROOT: web server absolute path to the libapt-modules-x.y.z directory
+	Model : inner joins configuration
+	Pages cache
+		Cache
+		FileCacheAdapter
+		AbstractCacheAdapter
+		Cache configuration
+
+
+
+=== LIBAPT v0.9.1 : 2013/02/16 ===
+Bugs
+	GenericQuery : SQL compiler doesn't work correctly with many joins on the same table
+		For example :
+			SELECT cars_1.label, cars_2.label
+			FROM cars AS cars_1, cars AS cars_2
+			WHERE cars_1.id = id_cars_1 AND cars_2.id = id_cars_2
+			=> 2 joins on the same 'cars' table
+		=> Update files class_sql_select_helpers.php, class_sql_filters_helpers.php
+	Crud controllers return status 200 if ok or status 400 if ko
+	utf8_convert : do not convert a string already in utf-8	format
+
+Updates
+	Application configuration :
+		LIBAPT_APP_HTML_LANGUAGE
+		LIBAPT_APP_HTML_CHARSET
+	View action redesign to manage view/page display :
+		index.php, Response class, ViewsController class
+		new configuraton constant LIBAPT_APP_LAYOUT_VIEW_CLASS with default value 'DefaultLayoutPageView'
+		new view DefaultLayoutPageView : default layout page for response output
+		remove include views creation from controller to layout view
+		remove include views creation from application to layout view
+		new view ControlledMenusBarView : display a named menus bar defined in the menus controller
+	Project documentation :
+		docs : PROJECT website (current)
+		docs : API on website (to update)
+		docs : MAGICAPP tutorial application on website (to update)
+		docs : MAGICAPP tutorial update on wiki (to update)
+		docs : DEMO on website (done)
+	HTML adapters API redesign with more flexibility
+		Accordion adapter
+		Grid layout adapter
+		Input adapater
+		Portlet adapter
+		Select adapter
+		Table adapter
+	HTML adapters implementation rewrite
+		jQueryUI
+			JQueryUIHtmlAccordionAdapter
+			JQueryUIHtmlInputAdapter
+			JQueryUIHtmlPortletAdapter
+		Foundation
+			FoundationHtmlAccordionAdapter
+			FoundationHtmlGridLayoutAdapter
+			FoundationHtmlTableAdapter
+	Template view engine (AbstractTemplateViewImple) updated with
+		Portlet tags : {bpc} {bp} {bpt} {ept} {bpb} {epb} {ep} {epc}
+		Table tags : {bt} {bth} {eth} {btb} {etb} {btf} {etf}
+		Accordion tags : {ba} {bat} {eat} {bac} {eac} {ea}
+		Links tafs {link_view_page:VIEWLABEL:VIEWNAME:VIEWOPTS:ANCHORTARGET} or {lv:VIEWLABEL:VIEWNAME:VIEWOPTS:ANCHORTARGET}
+		Images (todo)
+	Model resource file simplification (db and table are not required for all fields)
+	IncludeView options renamed : add prefix "include_"
+	Demo application : menus reorganisation, home page rewrite
+		...
+		Help module
+		Language module
+	
+Addons
+	Append some application configuration constant
+	Modify application configuration by session variable or request parameter:
+		set the author name with constant 'LIBAPT_APP_AUTHOR_NAME' in index.php
+		modify the author name with the url parameter 'application_author_name'
+		modify the author name with the session variable 'application_author_name'
+		an other example is the jQuery UI theme with 'LIBAPT_APP_LAYOUT_JQUERY_UI_THEME' or 'application_jqueryui_theme'
+		todo save request parameter to application session properties
+	Menus loader options:
+		display_url = 'absolute ou app relative url' to link the menu with the url.
+		menu_tooltip
+		icon_name
+		action js
+	Application auto login feature
+		=> index.php : LIBAPT_APP_HAS_AUTO_LOGIN, LIBAPT_APP_AUTO_LOGIN, LIBAPT_APP_AUTO_PASSWORD
+	Application readonly mode
+		=> index.php : LIBAPT_APP_IS_READONLY (disable create/update/delete in controllers)
+	JS Create wrappers API for application configuration (fields, models and views).
+
+
+=== LIBAPT v0.9.0 : 2013/01/15 ===
+Bugs
+	many bugs fix
+Updates
+	replace ExtTableModelView? by TemplateView? (done)
+	replace UserDashboardView? by TemplateView? (done)
+	replace old style Table view with a configurable modern one (ajax, json...) (done)
+	many documented source files (current, near 50%)
+	configuration options renaming and refactoring (current)
+	replace JKEditor (~1MB) by CLEditor (~50K) in DocWiki? (done)
+	many new icons (done)
+	Calendar plugin is more generic (done)
+	Demo application revamping (done)
+Addons
+	new Table feature : a toolbar (done)
+	new Table feature : a compact pager (done)
+	new Table feature : a filter editor (todo)
+	new loader feature : clone an existing resource (done)
+	new DocWiki? plugin : a simple wiki like plugin (current)
+	create FieldsRecordView? (done)
+	create AbstractTableModelView? (done)
+	create ToolbarView? (done)
+	create ToolbarButtonView? (done)
+	top bar navigation (todo)
+	tabs navigation (done)
+	new menu configuration format (done)
+	create Option class (todo)
+	new feature : do not display a field from a table row but edit it in a dialog (done)
+	new feature : view can be resizable (done)
+	new feature : view can have a scrollbar (done)
+	new feature : table view can have a label (done)
+	docs : PROJECT website (current)
+	docs : API on website (done)
+	docs : MAGICAPP tutorial application on website (done)
+	docs : MAGICAPP tutorial update on wiki (done)
+	docs : DEMO on website (todo)
+	remove Handsontable view and Pivot table view tests (done)
